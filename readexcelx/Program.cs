@@ -19,9 +19,7 @@ namespace readexcelx
         static string getValue(Microsoft.Office.Interop.Excel._Worksheet xlWorksheet, int x, int y)
         {
             object value = (xlWorksheet.Cells[x, y] as Microsoft.Office.Interop.Excel.Range).get_Value(Type.Missing);
-
-
-
+            
             return (value != null ? value.ToString().Trim() : "");
         }
 
